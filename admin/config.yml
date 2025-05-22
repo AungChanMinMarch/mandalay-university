@@ -2,22 +2,42 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "index.md"
-        label: "Home"
-        name: "home"
-        fields: [ { label: "Title", name: "title", widget: "string" }, { label: "Body", name: "body", widget: "markdown" } ]
-      - file: "about.md"
-        label: "About"
-        name: "about"
-        fields: [ { label: "Title", name: "title", widget: "string" }, { label: "Body", name: "body", widget: "markdown" } ]
-      - file: "contact.md"
-        label: "Contact"
-        name: "contact"
-        fields: [ { label: "Title", name: "title", widget: "string" }, { label: "Body", name: "body", widget: "markdown" } ]
+  - name: "staff"
+    label: "Staff"
+    folder: "content/staff"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Phone", name: "phone", widget: "string", required: false }
+      - { label: "Department", name: "department", widget: "string", required: false }
+      - { label: "Division", name: "division", widget: "string", required: false }
+      - { label: "Bio", name: "body", widget: "markdown", required: false }
+
+  - name: "departments"
+    label: "Departments"
+    folder: "content/departments"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Department Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Programs & Degrees", name: "programs", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "divisions"
+    label: "Offices & Administration"
+    folder: "content/divisions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Division Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
