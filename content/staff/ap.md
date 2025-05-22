@@ -1,6 +1,6 @@
 ---
 name: Aye aye
-title: Ap
+title: Professor
 photo: /assets/uploads/images.png
 department: math
 ---

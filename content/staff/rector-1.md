@@ -1,6 +1,6 @@
 ---
 name: U tin htun
-title: Rector
+title: Tutor
 photo: /assets/uploads/images.png
 department: math
 ---

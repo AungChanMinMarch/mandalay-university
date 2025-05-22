@@ -1,6 +1,6 @@
 ---
-name: U Ko Ko
+name: Dr Ko Ko Lwin
 title: Head
 photo: /assets/uploads/images.png
-department: Math
+department: math
 ---

@@ -1,6 +1,6 @@
 ---
 name: Gu
-title: Gugu
+title: Tutor
 photo: /assets/uploads/images.png
-department: center
+department: phy
 ---
