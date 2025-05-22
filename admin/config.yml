@@ -44,7 +44,6 @@ collections:
           options: ["cs", "phy", "math"]
         }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
-
   - name: "uniStaff"
     label: "University Staff"
     folder: "content/uni-staff"
