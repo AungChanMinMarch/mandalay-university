@@ -8,12 +8,16 @@ public_folder: "/assets/uploads"
 collections:
   - name: "staff"
     label: "University Staff"
-    folder: "content/staff" 
-    create: true # Allow users to create new documents in this collection                editor:                                                                                visualEditing: true
-    view_filters:                                                                          - label: Departmentn of Mathematics
+    folder: "content/staff"
+    create: true
+    editor:
+      visualEditing: true
+    view_filters:
+      - label: "Department of Mathematics"
         field: department
         pattern: 'math'
-      - label: Department of Physics                                                         field: department
+      - label: "Department of Physics"
+        field: department
         pattern: 'phy'
     slug: "{{slug}}"
     fields:
@@ -22,5 +26,10 @@ collections:
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
       - { label: "Phone", name: "phone", widget: "string", required: false }
-      - { label: "Department", name: "department", widget: "select", options: ["left", "phy", "math"] }
+      - {
+          label: "Department",
+          name: "department",
+          widget: "select",
+          options: ["left", "phy", "math"]
+        }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
