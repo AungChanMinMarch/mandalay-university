@@ -1,0 +1,44 @@
+<!DOCTYPE html>                                                                        <html lang="en">                                                                     <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <!-- font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/style.css">
+  <!-- JQuery CDN link -->
+	<nav id="nav-bar">
+    <a href="/" class="nav-logo">                                                            <img class="nav-logo-img" src="/img/mandalay.png" class="logo" alt="">
+        <span class="nav-logo-text">Mandalay University</span>                           </a>                                                                               <div class="navigation">                                                               <ul>                                                                                   <i id="menu-close" class="fas fa-times"></i>
+        <li><a href="/" class="active">Home</a></li>                                
+				<li><a href="/about">About Us</a></li>                                               <li><a href="/blog">Blog</a></li>                                                    <li><a href="/courses">Courses</a></li>                                              <li><a href="/contact">Contact</a></li>                                        </ul>
+
+      <img src="/img/menu.png" id="menu-btn" alt="">
+    </div>
+  </nav>
+	<!-- Navigation ends -->
+  <main>
+    {{ content | safe }}
+  </main>
+	<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('nav-bar');
+    const body = document.body;
+    if (window.scrollY > 0) {
+      body.classList.add('scrolled');
+    } else {
+      body.classList.remove('scrolled');
+    }
+  });
+		// Show menu links on burger click
+		document.getElementById('menu-btn').onclick = function(){
+			document.querySelector('nav .navigation ul').classList.add('active')
+		};
+
+		// Hide navbar on click function
+		document.getElementById('menu-close').onclick = function(){
+			document.querySelector('nav .navigation ul').classList.remove('active')
+		};
+	</script>
+</body>
+</html>
