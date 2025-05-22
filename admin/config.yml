@@ -22,6 +22,9 @@ collections:
       - label: "Department of Computer Science"
         field: department
         pattern: 'cs'
+    view_groups:
+      - label: Position
+        field: title
     slug: "{{slug}}"
     fields:
       - { label: "Name", name: "name", widget: "string" }
