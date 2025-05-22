@@ -6,9 +6,9 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "staff"
-    label: "University Staff"
-    folder: "content/staff"
+  - name: "teachingStaff"
+    label: "Teaching Staff"
+    folder: "content/teaching-staff"
     create: true
     editor:
       visualEditing: true
@@ -23,7 +23,7 @@ collections:
         field: department
         pattern: 'cs'
     view_groups:
-      - label: Position
+      - label: "Position"
         field: title
     slug: "{{slug}}"
     fields:
@@ -32,7 +32,7 @@ collections:
           label: "Title", 
           name: "title", 
           widget: "select",
-          options: ["Head", "Professor", "Associate Professor", "Lecturer", "Tutor"]
+          options: ["Head", "Professor", "Associate Professor", "Lecturer", "Tutor", "Secretary"]
         }
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
@@ -42,5 +42,33 @@ collections:
           name: "department",
           widget: "select",
           options: ["cs", "phy", "math"]
+        }
+      - { label: "Bio", name: "body", widget: "markdown", required: false }
+
+  - name: "uniStaff"
+    label: "University Staff"
+    folder: "content/uni-staff"
+    create: true                                                                         editor:
+      visualEditing: true
+    view_filters:
+      - label: "Finance"
+        field: office
+        pattern: 'finance'
+      - label: "Library"
+        field: office
+        pattern: 'libraray'
+    view_groups:
+      - label: "Position"                                                                    field: title
+    slug: "{{slug}}"                                                                     fields:                                                                                - { label: "Name", name: "name", widget: "string" }                                  - {                                                                                      label: "Title",
+          name: "title",                                                                       widget: "select",
+          options: ["Secretary"]         }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Phone", name: "phone", widget: "string", required: false }
+      - {
+          label: "Department",
+          name: "department",
+          widget: "select",
+          options: ["finance", "library"]
         }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
