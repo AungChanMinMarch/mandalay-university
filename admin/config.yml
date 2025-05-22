@@ -10,16 +10,14 @@ collections:
     label: "University Staff"
     folder: "content/staff"
     create: true
+    filter: { field: "department", value: "left"}
     slug: "{{slug}}"
-    nested:
-      depth: 2
-      summary: "{{name}} ({{department}})"
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
       - { label: "Phone", name: "phone", widget: "string", required: false }
-      - { label: "Department", name: "department", widget: "string" }
-      - { label: "Division", name: "division", widget: "string", required: false }
+      - { label: "Department", name: "department", widget: "select"
+  options: ["left", "center", "right"] }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
