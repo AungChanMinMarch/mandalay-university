@@ -1,5 +1,5 @@
 ---
-name: Dr. Aye aye
+name: Dr. Aye Aye
 title: Rector
 photo: /assets/uploads/images.png
 email: ayeaye.hotmail.com
