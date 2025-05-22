@@ -1,6 +1,6 @@
 ---
 name: Dr. Aye aye
-title: Rector
+title: Lecturer
 photo: /assets/uploads/images.png
 department: center
 ---
