@@ -22,3 +22,12 @@ collections:
       - { label: "Phone", name: "phone", widget: "string", required: false }
       - { label: "Department", name: "department", widget: "select", options: ["left", "center", "right"] }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
+
+    - name: "posts"
+    label: "Post"
+    folder: "_posts"
+    filter:
+      field: language
+      value: en
+    fields:
+      - { label: "Language", name: "language" }
