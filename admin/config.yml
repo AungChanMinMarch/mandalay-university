@@ -47,7 +47,8 @@ collections:
   - name: "uniStaff"
     label: "University Staff"
     folder: "content/uni-staff"
-    create: true                                                                         editor:
+    create: true
+    editor:
       visualEditing: true
     view_filters:
       - label: "Finance"
@@ -58,15 +59,18 @@ collections:
         pattern: 'libraray'
     view_groups:
       - label: "Position"                                                                    field: title
-    slug: "{{slug}}"                                                                     fields:                                                                                - { label: "Name", name: "name", widget: "string" }                                  - {                                                                                      label: "Title",
+    slug: "{{slug}}"
+    fields:                                                                                - { label: "Name", name: "name", widget: "string" }
+      - {                                                                                      label: "Title",
           name: "title",                                                                       widget: "select",
-          options: ["Secretary"]         }
+          options: ["Secretary", "Tech Guy"]
+        }
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
       - { label: "Phone", name: "phone", widget: "string", required: false }
       - {
-          label: "Department",
-          name: "department",
+          label: "Office",
+          name: "office",
           widget: "select",
           options: ["finance", "library"]
         }
