@@ -10,7 +10,9 @@ collections:
     label: "University Staff"
     folder: "content/staff"
     create: true
-    filter: { field: "department", values: ["left", "center", "right"]}
+    filter: 
+      field: department
+      value: left
     slug: "{{slug}}"
     fields:
       - { label: "Name", name: "name", widget: "string" }
