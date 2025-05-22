@@ -3,6 +3,6 @@ name: Dr. Aye aye
 title: Rector
 photo: /assets/uploads/images.png
 email: ayeaye.hotmail.com
-phone: "090000999"
+phone: "09123456789"
 department: "Department of Mathematics "
 ---
