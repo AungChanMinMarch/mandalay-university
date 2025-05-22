@@ -19,10 +19,22 @@ collections:
       - label: "Department of Physics"
         field: department
         pattern: 'phy'
+      - label: "Department of Computer Science"
+        field: department
+        pattern: 'cs'
+    view_filters:
+      - label: "Lecturer"
+        field: title
+        pattern: 'Lecturer'
     slug: "{{slug}}"
     fields:
       - { label: "Name", name: "name", widget: "string" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { 
+          label: "Title", 
+          name: "title", 
+          widget: "select",
+          options: ["Head", "Professor", "Associate Professor", "Lecturer", "Tutor"]
+        }
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
       - { label: "Phone", name: "phone", widget: "string", required: false }
@@ -30,6 +42,6 @@ collections:
           label: "Department",
           name: "department",
           widget: "select",
-          options: ["left", "phy", "math"]
+          options: ["cs", "phy", "math"]
         }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
