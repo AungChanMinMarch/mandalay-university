@@ -22,10 +22,6 @@ collections:
       - label: "Department of Computer Science"
         field: department
         pattern: 'cs'
-    view_filters:
-      - label: "Lecturer"
-        field: title
-        pattern: 'Lecturer'
     slug: "{{slug}}"
     fields:
       - { label: "Name", name: "name", widget: "string" }
