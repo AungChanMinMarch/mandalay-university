@@ -18,6 +18,5 @@ collections:
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
       - { label: "Phone", name: "phone", widget: "string", required: false }
-      - { label: "Department", name: "department", widget: "select"
-  options: ["left", "center", "right"] }
+      - { label: "Department", name: "department", widget: "select", options: ["left", "center", "right"] }
       - { label: "Bio", name: "body", widget: "markdown", required: false }
