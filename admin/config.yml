@@ -9,7 +9,7 @@ collections:
   - name: "teachingStaff"
     label: "Teaching Staff"
     folder: "content/teaching-staff"
-    slug: "{{name | slug}}-{{phone}}"
+    slug: "{{name | slug}}"
     create: true
     editor:
       visualEditing: true
@@ -29,8 +29,8 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - {
-          label: "Title",
-          name: "title",
+          label: "Position",
+          name: "position",
           widget: "select",
           options: ["Head", "Professor", "Associate Professor", "Lecturer", "Tutor", "Secretary"]
         }
@@ -43,12 +43,21 @@ collections:
           widget: "select",
           options: ["cs", "phy", "math"]
         }
-      - { label: "Bio", name: "body", widget: "markdown", required: false }
+      - label: "Education"
+        name: "education"
+        widget: "list"
+        required: false
+        summary: "{{fields.degree}} in {{fields.major}} ({{fields.university}}, {{fields.year}})"
+        fields:
+          - { label: "Degree", name: "degree", widget: "string" }
+          - { label: "Major", name: "major", widget: "string" }
+          - { label: "University", name: "university", widget: "string" }
+          - { label: "Year", name: "year", widget: "string" }
 
   - name: "uniStaff"
     label: "University Staff"
     folder: "content/uni-staff"
-    slug: "{{name | slug}}-{{phone}}"
+    slug: "{{name | slug}}"
     create: true
     editor:
       visualEditing: true
@@ -65,8 +74,8 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - {
-          label: "Title",
-          name: "title",
+          label: "Position",
+          name: "position",
           widget: "select",
           options: ["Secretary", "Tech Guy"]
         }
