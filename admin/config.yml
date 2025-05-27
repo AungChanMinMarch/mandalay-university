@@ -25,7 +25,7 @@ collections:
         pattern: 'cs'
     view_groups:
       - label: "Position"
-        field: title
+        field: position
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - {
