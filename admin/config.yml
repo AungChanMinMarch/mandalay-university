@@ -12,7 +12,7 @@ collections:
     slug: "{{name | slug}}"
     create: true
     editor:
-      visualEditing: true
+    visualEditing: true
     view_filters:
       - label: "Department of Mathematics"
         field: department
@@ -36,7 +36,6 @@ collections:
         }
       - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Email", name: "email", widget: "string", required: false }
-      - { label: "Phone", name: "phone", widget: "string" }
       - {
           label: "Department",
           name: "department",
@@ -53,6 +52,7 @@ collections:
           - { label: "Major", name: "major", widget: "string" }
           - { label: "University", name: "university", widget: "string" }
           - { label: "Year", name: "year", widget: "string" }
+      - { label: "Phone", name: "phone", widget: "string" }
 
   - name: "uniStaff"
     label: "University Staff"
