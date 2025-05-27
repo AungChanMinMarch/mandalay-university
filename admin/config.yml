@@ -12,7 +12,7 @@ collections:
     slug: "{{name | slug}}"
     create: true
     editor:
-    visualEditing: true
+      visualEditing: true
     view_filters:
       - label: "Department of Mathematics"
         field: department
